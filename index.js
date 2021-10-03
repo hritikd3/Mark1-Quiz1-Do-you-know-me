@@ -1,8 +1,13 @@
+console.log('welcome to this QUIZ where we test how much : DO YOU KNOW HRITIK :)')
+console.log("-------------------")
+
+
 var readlineSync=require('readline-sync');
 var userAnswer=readlineSync.question("whats your name ");
 
-console.log("Welcome :"+userAnswer);
-console.log("=====")
+
+console.log("Welcome :"+userAnswer,"!! you loook so energetic today, Isn't It ? Lets start quiz ");
+console.log("-------------")
 
 //play function
 var score=0;
@@ -23,20 +28,29 @@ console.log(score)
    console.log("-------------")
 }
 
-play ("where do you live ","indore");
-play ("do you like programming ","yes");
+play ("1)what is Hritik's hobbie ","coding");
+
+play("2)How old is Hritik ","21")
+
+console.log("      :lets make it more tricky, hahaha: ");
+
+   console.log("-------------")
+
+play ("3)If Hritik could wake up with a completely different permanent hair color,   what would it be? ","blue");
+
+
 
 
 // /array of objects
 var questions=[{
-  question:"so where do you work",
-  answer:"home"
+  question:"4)What is Hritik's favorite series on Netflix? ",
+  answer:"you"
 
 },{
-  question:"you like tea",
-  answer:"yes"
+  question:"5)If Hritik could be a cartoon character for a day, who would it be? ",
+  answer:"shinchan"
+  
   }];
-
 //loop
   for(var i=0;i<questions.length;i++)
   { var currentQuestion=questions[i];
@@ -44,5 +58,11 @@ var questions=[{
     play(currentQuestion.question,currentQuestion.answer)
   }
 
-  console.log("hurrey you scored ",score);
+  console.log("hurrey your total score is= ",score);
+  console.log("----------last-----------")
+  var final=readlineSync.question("do you want your answers to send it to hritik");
+  
+  
+console.log(":) Response updated, !! Thanks for answering this quiz")
+  
 
